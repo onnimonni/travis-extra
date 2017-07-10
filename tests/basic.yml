@@ -1,0 +1,7 @@
+env:
+  branch:
+    master:
+      WORLD: hello
+    develop:
+      SOMETHING: true
+      ANYTHING: false
