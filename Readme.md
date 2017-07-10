@@ -8,20 +8,20 @@ Helper script for doing more with Travis CI. It reads `.travis-extra.yml` file f
 This example `.travis-extra.yml`:
 ```yaml
 env:
-	branch:
-		master:
-			SOMEVAR=true
-			EXTRA_THING=taxi
+  branch:
+    master:
+      SOMEVAR=true
+      EXTRA_THING=taxi
 ```
 
 Will output these extra variables when `TRAVIS_BRANCH=master`.
-```
+```bash
 $ travis-extra --load-env
 export SOMEVAR=true EXTRA_THING=taxi
 ```
 
 You can load them by running:
-```
+```bash
 $ eval $(travis-extra --load-env)
 ```
 
