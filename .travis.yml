@@ -16,11 +16,11 @@ script:
   - set -ex
   
   # Test basic situation with file parameter
-  - TRAVIS_BRANCH=master travis-extra --file=tests/basic.yml | grep "export WORLD=hello"
+  - TRAVIS_BRANCH=master travis-extra --file=tests/basic.yml --load-env | grep "export WORLD=hello"
   
   # Test same file without file parameter
   - cp tests/basic.yml .travis-extra.yml
-  - TRAVIS_BRANCH=develop travis-extra | grep "export SOMETHING=true ANYTHING=false"
+  - TRAVIS_BRANCH=develop travis-extra --load-env | grep "export SOMETHING=true ANYTHING=false"
 
 deploy:
   deploy:
