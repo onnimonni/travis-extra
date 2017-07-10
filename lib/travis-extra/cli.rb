@@ -31,7 +31,7 @@ module TravisExtra
     def run
 
       begin
-        config = Config.parse
+        config = Config.parse(options)
       rescue ConfigNotFoundError => e
         STDERR.puts "Error: #{e.message}"
         exit 1
