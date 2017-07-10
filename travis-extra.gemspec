@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.require_path          = 'lib'
   s.required_ruby_version = '>= 1.9.3'
 
-  # prereleases from Travis CI
-  if ENV['CI']
+  # prereleases from Travis CI for builds when tag is not set
+  if ENV['CI'] and not ENV['TRAVIS_TAG']
     digits = s.version.to_s.split '.'
     digits[-1] = digits[-1].to_s.succ
     s.version = digits.join('.') + ".travis.#{ENV['TRAVIS_JOB_NUMBER']}"

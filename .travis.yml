@@ -22,5 +22,6 @@ deploy:
   deploy:
   provider: rubygems
   api_key: $RUBYGEMS_APIKEY
+  gemspec: my-gemspec.gemspec
   on:
-    tags: true
+    branch: master
