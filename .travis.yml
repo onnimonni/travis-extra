@@ -19,9 +19,13 @@ script:
   - TRAVIS_BRANCH=develop travis-extra --load-env | grep "export SOMETHING=true ANYTHING=false"
 
 deploy:
-  deploy:
-  provider: rubygems
-  api_key: $RUBYGEMS_APIKEY
-  gemspec: my-gemspec.gemspec
-  on:
-    branch: master
+  - provider: rubygems
+    api_key: $RUBYGEMS_APIKEY
+    on:
+      repo: onnimonni/travis-extra
+      tags: true
+  - provider: rubygems
+    api_key: $RUBYGEMS_APIKEY
+    on:
+      repo: onnimonni/travis-extra
+      branch: master
