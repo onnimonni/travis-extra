@@ -6,14 +6,10 @@ env:
     # Rubygems API key
     - secure: "Y3lnUlu44gQonk2kpCdz0DtWktgDC11FOyuJxmO2nG/eZkcK0SIsoWEiHZU29cwZ6F72TCxSf11r6XEH+Gu9zFK2c5XH+xEzM5tXQJnOC2JjJr+H5KZwB5//4MSWDmAPujoDoszyjT299BMa8LC801B+FnTg1g6LrEHHX+geHtENbU2O9lGVoIhsOFOgd+kk0V9Z+X3omw9Mv5nN2PapG3thw3yXzd38rT+c97/181co2wm4y8pHrutLKKQqc61xUHw3v/xIsPcYxSj9MqS0M5ULnIxxXV4RwfD2TZIuKPxrmoPW0PpoI/t7yg6JuM88r+wDAIhC8cT4g1wgwYW7PhvSV7o9HWWCWhNOMnDDdw/OWWKDw4G5+XpV4wRgyLm+HwXDSxVcIsXGDPITB0exeCin75oXCQZl9FDyC1i+qiM8cFTjUJo6IfnbfWViBDKSlOWpETgSI0Hr1tgtSDoKfTfdNIYLCmGvFcxsfNcHEYVJHF5NXEwcmWWcKiPBs+OBMbrGgY8mZ2zqPXYGywDav+Z5u1mzN7UUuHpixTYH0t6Es0MlUo0XILKNHtmohS1iQd0GwkgDXj3dtxKU3RA5NvLlD47gxuvuFqgC1KjQ+R3QaJ+hLboJPxz+zw3UahF8cmNV0cJY4qI6oi+RLpeWzSTH2Z9DqTqNyGVCWVNtYmU="
 
-before_script:
-  - bundle install
-
 script:
+  # Build and install this gem
   - gem build travis-extra.gemspec
   - gem install travis-extra-*.gem
-
-  - set -ex
   
   # Test basic situation with file parameter
   - TRAVIS_BRANCH=master travis-extra --file=tests/basic.yml --load-env | grep "export WORLD=hello"
