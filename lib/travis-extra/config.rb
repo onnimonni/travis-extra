@@ -14,6 +14,6 @@ module TravisExtra
       end
     end
 
-    CONFIG_FILES=%w[ .travis-extra.yml, .travis-extra.yaml ]
+    CONFIG_FILES=%w[ .travis-extra.yml .travis-extra.yaml ]
   end
 end
