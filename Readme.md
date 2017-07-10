@@ -1,4 +1,4 @@
-# travis-extra [![Build Status](https://travis-ci.org/onnimonni/travis-extra.svg?branch=master)](https://travis-ci.org/onnimonni/travis-extra) [![Gem Version](https://badge.fury.io/rb/dpl.png)](http://badge.fury.io/rb/dpl)
+# travis-extra [![Build Status](https://travis-ci.org/onnimonni/travis-extra.svg?branch=master)](https://travis-ci.org/onnimonni/travis-extra) [![Gem Version](https://badge.fury.io/rb/travis-extra.svg)](http://badge.fury.io/rb/travis-extra)
 
 Helper script for doing more with Travis CI. It reads `.travis-extra.yml` file from current directory and exports environmental variables for your CI run.
 
